@@ -9,11 +9,30 @@
 
 <body>
     <h1>Carrinho de Compras Online</h1>
-    <p>Simule um carrinho de compras adicionando produtos, visualizando o total e gerenciando seu orçamento.</p>
-    <p>As interações serão feitas por meio de <strong>prompt()</strong> para entrada de dados e <strong>alert()</strong>
-        para exibição das informações.</p>
-
-    <script src="./index.js"></script> <!-- Conectado ao arquivo index.js -->
-</body>
-
+    <p>Adicione produtos ao carrinho e visualize o total!</p>
+  
+    <!-- Menu de produtos -->
+    <label for="produto">Escolha um produto:</label>
+    <select id="produto">
+      <option value="camisa">Camisa - R$50</option>
+      <option value="calca">Calça - R$100</option>
+      <option value="sapato">Sapato - R$150</option>
+      <option value="bone">Boné - R$25</option>
+    </select>
+  
+    <!-- Campo de quantidade -->
+    <label for="quantidade">Quantidade:</label>
+    <input type="number" id="quantidade" min="1" value="1" />
+  
+    <!-- Botões de ação -->
+    <button onclick="adicionarAoCarrinho()">Adicionar</button>
+    <button onclick="mostrarCarrinho()">Ver Carrinho</button>
+  
+    <!-- Área para exibir o carrinho -->
+    <h2>Itens no Carrinho</h2>
+    <div id="carrinho"></div>
+  
+    <!-- Conexão com JS -->
+    <script src="./index.js"></script>
+  </body>
 </html>
